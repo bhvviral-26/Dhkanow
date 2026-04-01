@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viral content update</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 400px;
+            padding: 20px;
+        }
+
+        /* First Page Styles */
+        #first-page .blur-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            filter: blur(8px);
+            margin-bottom: 20px;
+        }
+
+        .warning-text {
+            color: #ff4d4d;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .btn-group button {
+            padding: 10px 25px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .unblur-btn { background-color: #00cc66; color: white; }
+        .goback-btn { background-color: #555; color: white; }
+
+        /* Second Page Styles */
+        #second-page {
+            display: none;
+        }
+
+        .sticker {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .fool-text {
+            font-size: 28px;
+            color: #ffcc00;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            left: 0;
+            font-style: italic;
+            font-size: 12px;
+            color: #888;
+        }
+
+        .highlight {
+            color: #00cc66;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="first-page">
+            <h2 class="warning-text">⚠️ primium Private chat Leaking site!</h2>
+            <div class="blur-images">
+                <div style="height:100px; background:#444; border-radius:8px;"></div>
+                <div style="height:100px; background:#444; border-radius:8px;"></div>
+                <div style="height:100px; background:#444; border-radius:8px;"></div>
+                <div style="height:100px; background:#444; border-radius:8px;"></div>
+            </div>
+            <p>ঢাকার সমানধন্য কলেজের শিক্ষার্থীর ইনবক্সের অসামাজিকতা</p>
+            <div class="btn-group">
+                <button class="unblur-btn" onclick="goToSecondPage()">Unblur</button>
+                <button class="goback-btn" onclick="goToSecondPage()">Go back</button>
+            </div>
+        </div>
+
+        <div id="second-page">
+            <div class="sticker"> 🖕</div>
+            <h1 class="fool-text">April fool motherfucker 🤍</h1>
+           <audio id="prank-audio" src="song.mp3" preload="auto"></audio>
+
+        </div>
+        
+
+        <div class="footer">
+            <span class="highlight">An as kafi creation 🌼</span>
+        </div>
+    </div>
+
+    <script>
+        function goToSecondPage() {
+            // গান প্লে করা শুরু করবে
+            var audio = document.getElementById('prank-audio');
+            audio.play().catch(function(error) {
+                console.log("Audio play failed: ", error);
+            });
+
+            // পেজ পরিবর্তন
+            document.getElementById('first-page').style.display = 'none';
+            document.getElementById('second-page').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
